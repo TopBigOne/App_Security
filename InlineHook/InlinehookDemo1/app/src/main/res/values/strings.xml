@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">inlinehookDemo1</string>
+    <string name="test_inline_hook_one">test inline hook one</string>
+    <string name="test_inline_hook_two">test inline hook two</string>
+</resources>
