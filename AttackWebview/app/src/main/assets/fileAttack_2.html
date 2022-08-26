@@ -1,0 +1,23 @@
+<script>
+    function loadXMLDoc()
+{
+    var arm = "https://bbs.pediy.com/";
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        //alert("status is"+xmlhttp.status);
+        if (xmlhttp.readyState==4)
+        {
+              console.log(xmlhttp.responseText);
+        }
+    }
+    xmlhttp.open("GET",arm);
+    xmlhttp.send(null);
+}
+loadXMLDoc();
+
+</script>
