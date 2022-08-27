@@ -527,11 +527,9 @@ public class SafeWebView extends WebView {
             if (mJsCallJavas != null && JsCallJava.isSafeWebViewCallMsg(message)) {
                 JSONObject jsonObject = JsCallJava.getMsgJSONObject(message);
                 String interfacedName = JsCallJava.getInterfacedName(jsonObject);
-                if (interfacedName != null) {
-                    JsCallJava jsCallJava = mJsCallJavas.get(interfacedName);
-                    if (jsCallJava != null) {
-                        result.confirm(jsCallJava.call(view, jsonObject));
-                    }
+                JsCallJava jsCallJava = mJsCallJavas.get(interfacedName);
+                if (jsCallJava != null) {
+                    result.confirm(jsCallJava.call(view, jsonObject));
                 }
                 return true;
             } else {
